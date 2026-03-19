@@ -28,38 +28,7 @@
     echo "1 Вариант ($a*$b): ".m($a,$b)."<br>";
     echo "2 Вариант ($a*$b): ".$result();
     echo "<br>--Задание 3--<br>";
-    //Задание 3
-    function operation($m, $n, $o) {
-    return $o($m, $n);
-    }
 
-    $sum = function($a, $b) { return $a + $b; };
-    echo "($a+$b) = ".operation($a, $b, $sum);
-    echo "<br>--Задание 4--<br>";
-    //Задание 4
-echo "Исходный массив: ";
-        function my_array_map($fn, $array) {
-    $result = [];
-    
-    for ($i=0;$i < count($array);i++) {
-        echo $array[$i]." ";
-        $result[] = $fn($array[$i]);
-    }
-    return $result;
-}
-
-$numbers = [1, 2, 3, 4];
-$squared = my_array_map(function($x) { return $x*$x; }, $numbers);
-
-
-    echo "<br>--Задание 5--<br>";
-    //Задание 5
-
-    echo "<br>--Задание 6--<br>";
-    //Задание 6
-
-        echo "<br>--Задание 7--<br>";
-    //Задание 7
 
     
    ?>
