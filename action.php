@@ -63,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'email' => $email,
             'gender' => $gender
         ];
+header("Location: calculator.php");
         exit();
     }
 } else {
