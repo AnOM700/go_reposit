@@ -24,4 +24,35 @@ if(file_exists("folder/mir.txt")){
 mkdir("test",0775);
 rename("test","www");
 rmdir("www");
+$folders = ['Images', 'Documents', 'Projects', 'Archive'];
+$root = 'test';
+
+if (!is_dir($root)) {
+    mkdir($root, 0775);
+}
+
+foreach ($folders as $folderName) {
+    $path = $root ."/". $folderName;
+
+    if (!is_dir($path)) {
+        if (mkdir($path, 0777)) {
+            echo "Создана папка: $path<br>";
+        }
+    } else {
+        echo "Папка уже существует: $path<br>";
+    }
+}
+
+echo "<br>--- Поиск JPG файлов ---<br>";
+
+$jpgFiles = glob("*.jpg");
+
+if (!empty($jpgFiles)) {
+    echo "Найдены JPG файлы:<br>";
+    foreach ($jpgFiles as $file) {
+        echo $file . "<br>";
+    }
+} else {
+    echo "Файлы с расширением .jpg не найдены в текущей директории.\n";
+}
 ?>
