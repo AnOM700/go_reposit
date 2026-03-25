@@ -8,6 +8,7 @@ $file =fopen("test.txt","r");
 $str = fgets($file);
 echo $str."<br />";
 }
+rename("test.txt","mir.txt");
 
 
 ?>
