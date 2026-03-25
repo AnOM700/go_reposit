@@ -23,4 +23,5 @@ if(file_exists("folder/mir.txt")){
 }
 mkdir("test",0775);
 rename("test","www");
+rmdir("www");
 ?>
