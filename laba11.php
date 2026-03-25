@@ -22,4 +22,5 @@ if(file_exists("folder/mir.txt")){
     echo "Файл mir.txt существует<br>";
 }
 mkdir("test",0775);
+rename("test","www");
 ?>
