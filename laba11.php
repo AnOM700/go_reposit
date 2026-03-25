@@ -9,6 +9,8 @@ $str = fgets($file);
 echo $str."<br />";
 }
 rename("test.txt","mir.txt");
+mkdir("folder",0700);
+rename("mir.txt","folder/mir.txt");
 
 
 ?>
