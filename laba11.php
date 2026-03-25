@@ -9,7 +9,7 @@ $str = fgets($file);
 echo $str."<br />";
 }
 rename("test.txt","mir.txt");
-mkdir("folder",0700);
+mkdir("folder",0775);
 rename("mir.txt","folder/mir.txt");
 copy("folder/mir.txt","folder/world.txt");
 $size=filesize("folder/world.txt");
@@ -21,4 +21,5 @@ if(!file_exists("folder/world.txt")){
 if(file_exists("folder/mir.txt")){
     echo "Файл mir.txt существует<br>";
 }
+mkdir("test",0775);
 ?>
