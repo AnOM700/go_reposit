@@ -15,6 +15,21 @@
     } else {
         $file = fopen($filename, "r");
     }
+
+    echo "<br><b>2. Деление на ноль:</b><br>";
+    try {
+        $a = 10;
+        $b = 0;
+        if ($b === 0) {
+            throw new DivisionByZeroError("Ошибка: Деление на ноль!");
+        }
+        echo $a / $b;
+    } catch (DivisionByZeroError $e) {
+        $msg = $e->getMessage();
+        file_put_contents("log.txt", $msg, FILE_APPEND);
+        echo "Произошла ошибка, сообщение сохранено в log.txt: " . $e->getMessage() . "<br>";
+    }
+
 ?>
 </div>
 
