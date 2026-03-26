@@ -54,7 +54,7 @@
     $diff = time() - $pastDate;
     echo "2. Секунд с 02.10.1990: $diff <br>";
     echo "3. Сейчас: " . date('Y.m.d H:i:s') . "<br>";
-
+    echo "4. 1 сентября этого года: " . date('Y.09.01') . "<br>";
 
 
 ?>
