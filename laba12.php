@@ -67,7 +67,30 @@
     $bdayNum = date('w', strtotime('2016-06-12'));
     echo "6. Сегодня: " . $week[$currentDayNum] . ". А 12.06.2016 было: " . $week[$bdayNum] . "<br>";
     ?>
+
 </div>
+<div>
+    <b>7. Сравнение дат через форму:</b><br>
+    <form method="POST">
+        <input type="date" name="date1" required>
+        <input type="date" name="date2" required>
+        <button type="submit">Сравнить</button>
+    </form>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $date1 = $_POST['date1'];
+        $date2 = $_POST['date2'];
+        if ($date1 > $date2) {
+            echo "Большая дата: $date1";
+        } elseif ($date2 > $date1) {
+            echo "Большая дата: $date2";
+        } else {
+            echo "Даты равны";
+        }
+    }
+    ?>
+</div>
+
 
 
 
