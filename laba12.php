@@ -44,7 +44,13 @@
     }
     ?>
 </div>
-
+<h2>Часть 2</h2>
+<div>
+    <?php
+    $ts1 = strtotime("2025-03-15 10:25:00");
+    echo "1. Timestamp (15.03.2025): $ts1 <br>";
+?>
+</div>
 
 
 </body>
