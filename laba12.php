@@ -104,6 +104,9 @@
     $final_date=date_format($dateBase,'d-m-Y');
     echo "9. Базовая: $baseDateFormat. <br>"."Итоговая дата: $final_date";
 
+    $newYear = strtotime('first day of January next year');
+    $daysLeft = ceil(($newYear - time()) / 86400);
+    echo "<br>10. До Нового года осталось дней: $daysLeft";
 
 
 ?>
