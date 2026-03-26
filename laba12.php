@@ -98,6 +98,14 @@
     echo "8. Из $inputDate в $formattedDate <br>";
 
 
+    $dateBase = date_create('2000-02-03');
+    $baseDateFormat=date_format($dateBase,'d-m-Y');
+    date_modify($dateBase, '2 days 1 month 3 days 1 year -3 days');
+    $final_date=date_format($dateBase,'d-m-Y');
+    echo "9. Базовая: $baseDateFormat. <br>"."Итоговая дата: $final_date";
+
+
+
 ?>
 </div>
 
