@@ -49,6 +49,12 @@
     <?php
     $ts1 = strtotime("2025-03-15 10:25:00");
     echo "1. Timestamp (15.03.2025): $ts1 <br>";
+
+    $pastDate = strtotime('1990-10-02 08:05:59');
+    $diff = time() - $pastDate;
+    echo "2. Секунд с 02.10.1990: $diff <br>";
+
+
 ?>
 </div>
 
