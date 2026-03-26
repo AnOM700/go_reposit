@@ -30,8 +30,22 @@
         echo "Произошла ошибка, сообщение сохранено в log.txt: " . $e->getMessage() . "<br>";
     }
 
-?>
+    echo "<br><b>3. Массив:</b><br>";
+    $countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
+    $key = 'Germany';
+
+    try {
+        if (!array_key_exists($key, $countries)) {
+            throw new Exception("Ошибка: Ключа '$key' не существует в массиве.");
+        }
+        echo $countries[$key];
+    } catch (Exception $e) {
+        echo $e->getMessage() . "<br>";
+    }
+    ?>
 </div>
+
+
 
 </body>
 </html>
