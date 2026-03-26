@@ -91,6 +91,15 @@
     ?>
 </div>
 
+<div>
+    <?php
+    $inputDate = '2025-05-20';
+    $formattedDate = date('d-m-Y', strtotime($inputDate));
+    echo "8. Из $inputDate в $formattedDate <br>";
+
+
+?>
+</div>
 
 
 
