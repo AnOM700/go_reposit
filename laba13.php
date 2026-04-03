@@ -30,9 +30,13 @@ public function setAge($age) {
 }
 
 
-
-
-
+public function checkAge() {
+    if ($this->age > 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 }
 
@@ -66,6 +70,8 @@ echo "Зарплата: " . $worker1->getSalary() . "<br>";
 $sumSalary = $worker1->getSalary() + $worker2->getSalary();
 echo "Сумма зарплат через getSalary: " . $sumSalary . "<br>";
 
+// ПУНКТ 9 (1-true;0-false)
+echo($worker1->checkAge()); 
 
 ?>
 
