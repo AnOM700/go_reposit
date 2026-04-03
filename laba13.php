@@ -34,12 +34,12 @@ echo "<h3>Результаты выполнения задания:</h3>";
 $worker1 = new Worker();
 $worker1->name = "Иван";
 $worker1->salary = 1000;
-$worker1->age(25); 
+$worker1->age = 25; 
 
 $worker2 = new Worker();
 $worker2->name = "Василий";
 $worker2->salary = 2000;
-$worker2->age(30);
+$worker2->age = 30;
 // ПУНКТ 2
 echo "Сумма зарплат: " . ($worker1->salary + $worker2->salary) . "<br>";
 echo "Сумма возрастов: " . ($worker1->age + $worker2->age) . "<br>";
@@ -48,6 +48,10 @@ echo "Сумма возрастов: " . ($worker1->age + $worker2->age) . "<br>
 echo "Имя: " . $worker1->getName() . "<br>";
 echo "Возраст: " . $worker1->getAge() . "<br>";
 echo "Зарплата: " . $worker1->getSalary() . "<br>";
+
+//ПУНКТ 6
+$sumSalary = $worker1->getSalary() + $worker2->getSalary();
+echo "Сумма зарплат через getSalary: " . $sumSalary . "<br>";
 
 
 ?>
