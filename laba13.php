@@ -20,9 +20,9 @@ public function getAge() {
 public function getSalary() {
     return $this->salary;
 }
-//ПУНКТ 7,8
+//ПУНКТ 7,8,10
 public function setAge($age) {
-    if ($age >= 18) {
+    if ($this->checkAge($age)) {
         $this->age = $age;
     } else {
         echo "Вам работать в нашей компании еще рано<br>";
@@ -30,8 +30,8 @@ public function setAge($age) {
 }
 
 
-public function checkAge() {
-    if ($this->age > 18) {
+private function checkAge($age) {
+    if ($age >= 18) {
         return true;
     } else {
         return false;
@@ -70,8 +70,7 @@ echo "Зарплата: " . $worker1->getSalary() . "<br>";
 $sumSalary = $worker1->getSalary() + $worker2->getSalary();
 echo "Сумма зарплат через getSalary: " . $sumSalary . "<br>";
 
-// ПУНКТ 9 (1-true;0-false)
-echo($worker1->checkAge()); 
+
 
 ?>
 
