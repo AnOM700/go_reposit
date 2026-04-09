@@ -10,6 +10,11 @@ class Page {
         
     }
 
+    public function render(){
+        echo $this->template;
+    
+    }
+
 
 }
 
