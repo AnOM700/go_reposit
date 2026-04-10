@@ -32,4 +32,24 @@ class Rectangle extends Figure implements CalculatableArea {
     }
 }
 
+class Square extends Figure implements CalculatableArea {
+    private $a;
+
+    public function __construct($a, $color = "blue") {
+        $this->a = $a;
+        $this->color = $color;
+        $this->sidesCount = 4;
+    }
+
+    public function getArea() {
+        $this->area = $this->a * $this->a;
+        return $this->area;
+    }
+
+    public function infoAbout() {
+        return "Это класс квадрата. У него {$this->sidesCount} стороны.";
+    }
+}
+
+
 ?>
