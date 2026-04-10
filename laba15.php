@@ -73,6 +73,17 @@ class Triangle extends Figure implements CalculatableArea {
         return "Это класс треугольника. У него {$this->sidesCount} стороны.";
     }
 }
+$rect1 = new Rectangle(5, 10);
+$rect2 = new Rectangle(3, 7);
+$square1 = new Square(5);
+$square2 = new Square(12);
+$triang1 = new Triangle(3, 4, 5);
+$triang2 = new Triangle(10, 10, 12);
 
+$figures = [$rect1, $rect2, $square1, $square2, $triang1, $triang2];
+
+foreach ($figures as $item) {
+    echo $item->infoAbout() . " Площадь: " . $item->getArea() . "<br>";
+}
 
 ?>
