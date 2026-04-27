@@ -1,4 +1,3 @@
-файле header.php, но уже в другой ветке.
 <?php
 $menuItems = [
     'Главная' => '/index.php',
