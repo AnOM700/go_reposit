@@ -1,17 +1,42 @@
-# .gitignore
-# Игнорирование системных файлов
+# Секреты и конфиги
+.env
+.env.local
+.env.production
+config.local.php
+*.local.php
+secrets/
+credentials/
+
+# PostgreSQL и бэкапы
+*.sql
+*.dump
+*.backup
+backups/
+dumps/
+*.log
+pg_log/
+
+# PHP
+/vendor/
+composer.lock
+node_modules/
+
+# Кэш и временные файлы
+cache/
+tmp/
+temp/
+*.tmp
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Системные
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Игнорирование логов
-*.log
 
-# Игнорирование временных файлов
-*.tmp
-*.temp
-
-# Игнорирование конфигурационных файлов с паролями
-config.php
-
-# Игнорирование папки с зависимостями
-/vendor/
